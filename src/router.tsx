@@ -9,15 +9,9 @@ import {createBrowserRouter} from "react-router-dom"
 import ErrorPage from "./routes/error-page"
 import Root from "./routes/root"
 
-import Camera from "./routes/templates/camera"
 import Graph from "./routes/templates/graph"
 
 export const MenuList = [
-  {
-    name: 'Camera',
-    path: "camera",
-    element: <Camera />,
-  },
   {
     name: 'Graph',
     path: "graph",

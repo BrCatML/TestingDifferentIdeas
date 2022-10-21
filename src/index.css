@@ -126,7 +126,7 @@ button:active {
   box-shadow: 0 0px 1px hsla(0, 0%, 0%, 0.4);
   transform: translateY(1px);
 }
-
+/* 
 #contact h1 {
   display: flex;
   align-items: flex-start;
@@ -149,7 +149,7 @@ button:active {
 #contact h1 form button[value="true"]:hover,
 #contact h1 form button[value="false"] {
   color: #eeb004;
-}
+} */
 
 form[action$="destroy"] button {
   color: #f44250;
@@ -304,12 +304,12 @@ i {
 }
 
 #sidebar nav a.active {
-  background: hsl(224, 98%, 58%);
+  background: hsl(0, 86%, 25%);
   color: white;
 }
 
 #sidebar nav a.pending {
-  color: hsl(224, 98%, 58%);
+  color: hsl(0, 86%, 25%);
 }
 
 #detail {
@@ -318,12 +318,12 @@ i {
   width: 100%;
 }
 
-#detail.loading {
+/* #detail.loading {
   opacity: 0.25;
   transition: opacity 200ms;
   transition-delay: 200ms;
-}
-
+} */
+/* 
 #contact {
   max-width: 40rem;
   display: flex;
@@ -425,7 +425,7 @@ i {
 
 #contact-form p:last-child button[type="button"] {
   color: inherit;
-}
+} */
 
 #zero-state {
   margin: 2rem auto;

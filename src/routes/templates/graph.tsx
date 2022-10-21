@@ -1,10 +1,12 @@
 import React from "react";
+import MyDiagram from "../../components/graphReaflow";
 
 export default () => {
 
-  return (
+  return (<>
     <div id="contact">
-        Страница Graph
+      Reaflow
+    <MyDiagram></MyDiagram>
     </div>
-  );
+  </>);
 }

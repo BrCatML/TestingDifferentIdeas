@@ -8,3 +8,6 @@
  - [redux](https://redux.js.org) и его ответвления
  - графический редактор схем [reaflow](https://github.com/reaviz/reaflow)
  - тесты компонентов
+
+### графический редактор схем [reaflow](https://github.com/reaviz/reaflow)
+1. npm install reaflow --save
