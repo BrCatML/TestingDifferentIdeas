@@ -1,0 +1,123 @@
+
+:root {
+  --backgroundColor: #17191d;
+	--textBackground2: #25272b;
+	--textBackground: #333;
+	--bodyTextColor: rgb(191, 205, 211);
+	--text: #e7e7e0;
+  --index: calc(1vw + 1vh);
+}
+
+body {
+	background-color: var(--backgroundColor);
+  color: var(--bodyTextColor);
+
+  }
+
+h1 {
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--text);
+  text-shadow: 0 0 15px #9d822b;
+	font-size: calc(var(--index) * 2.65);
+}
+
+.App {
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    margin: 30px 32px;
+    /* padding: 50px; */
+/* 
+  background: no-repeat linear-gradient( #3d156b , 5%, var(--backgroundColor) ); */
+
+  }
+
+  .App ::selection {
+    background: #25272b;
+    color: #ffe9a1;
+  }
+
+  .Component {
+    background: var(--textBackground2);
+    align-items: center;
+    color: var(--text);
+    width: 100%;
+    display: block;
+    
+    padding: 10px;
+    border-radius: 10px;
+    /* border:  1px solid #5c5a02; */
+  }
+  .Component_title {
+    background: var(--textBackground);
+    padding: 16px;
+    font-family: monospace;
+    text-align: center;
+
+    /* writing-mode: vertical-lr; */
+    /* text-orientation: upright; */
+  }
+  .Component_text {
+    background: var(--textBackground);
+    padding: 16px;
+    font-family: monospace;
+  }
+  
+  .btn {
+    display: inline-block;	
+    box-sizing: border-box;
+    width: 100%;
+    /* padding: 0px 16px; */
+    margin: 15px 0px 15px 0px;
+    outline: none;
+    border: 1px solid #5c5a02;
+    border-radius: 10px;
+    height: 46px;
+    /* line-height: 46px; */
+    font-size: 14px;
+    /* font-weight: 600; */
+    text-decoration: none;
+    color: #9d822b;
+    background-color: black;
+    box-shadow: 0px 0px 20px #9d822b;
+    cursor: pointer;
+    user-select: none;
+    appearance: none;
+    /* touch-action: manipulation;   */
+    vertical-align: top;
+    transition:  1s;
+  }
+  .btn:focus-visible {
+    border: 1px solid #4c51f9;
+    outline: none;
+  }
+  .btn:hover {
+    transition: all 0.2s;
+    /* background-color: red; */
+    box-shadow: 0px 0px 10px #ffe9a1;
+  }
+  .btn:active {
+    /* color: #ff0000; */
+    box-shadow: 0px 0px 3px #ffe9a1, 0px 0px 10px #ff0000 ;
+  }
+  .btn:disabled {
+    pointer-events: none;
+    cursor: progress;
+    opacity: 0.5;
+    color: #ff0000;
+    box-shadow: 0 4px 6px #ff0000, 0 1px 3px #ff0000 ;
+  }
+
+  .History {
+    width: 100%;
+  }
+  .History_List {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    font-size: smaller;
+    color: gray;
+  }
