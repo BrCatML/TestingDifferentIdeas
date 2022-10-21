@@ -15,3 +15,16 @@ root.render(
     <App />
   </StrictMode>
 );
+
+// import React from 'react';
+// import ReactDOM from 'react-dom';
+// import { BrowserRouter } from 'react-router-dom';
+
+// const App = () => <h1>Привет, React Router</h1>;
+
+// ReactDOM.render(
+//   <BrowserRouter>
+//     <App />
+//   </BrowserRouter>,
+//   document.getElementById('root')
+// )
