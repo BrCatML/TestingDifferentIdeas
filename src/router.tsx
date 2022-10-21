@@ -1,25 +1,35 @@
-import {createBrowserRouter} from "react-router-dom";
+/*
+DOM дерево. 
+В идеале надо троить его автоматически, как минимум на основе содержимого './routes/templates/'
+*/
 
-import Root from "./routes/root";
-import ErrorPage from "./error-page";
-import Camera from "./routes/camera";
-import React from "react";
-import Graph from "./routes/graph";
+import React from "react"
+import {createBrowserRouter} from "react-router-dom"
+
+import ErrorPage from "./routes/error-page"
+import Root from "./routes/root"
+
+import Camera from "./routes/templates/camera"
+import Graph from "./routes/templates/graph"
+
+export const MenuList = [
+  {
+    name: 'Camera',
+    path: "camera",
+    element: <Camera />,
+  },
+  {
+    name: 'Graph',
+    path: "graph",
+    element: <Graph />,
+  },
+]
 
 export const router = createBrowserRouter([
-    {
-      path: "/",
-      element: <Root />,
-      errorElement: <ErrorPage />,
-      children: [
-        {
-          path: "camera",
-          element: <Camera />,
-        },
-        {
-            path: "graph",
-            element: <Graph />,
-        },
-      ]
-    },
-]);
+  {
+    path: "/",
+    element: <Root />,
+    errorElement: <ErrorPage />,
+    children: MenuList.map((value) => ({ path : value.path, element: value.element }))
+  },
+])
