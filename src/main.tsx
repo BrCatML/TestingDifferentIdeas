@@ -1,12 +1,13 @@
 import React from "react"
 import ReactDOM from "react-dom/client"
 import {RouterProvider} from "react-router-dom"
-import "./index.css"
-
 import {router} from "./router" // здесь dom дерево
 
+import './index.css'
+import './static/antd.css'
+
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
-  <React.StrictMode>
-    <RouterProvider router={router} />
-  </React.StrictMode>
+  // <React.StrictMode> - вызывает рендер дважды. убрала
+      <RouterProvider router={router} />
+  // </React.StrictMode>
 )

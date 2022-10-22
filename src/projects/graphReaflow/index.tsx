@@ -6,8 +6,17 @@ type dataApi = { data: {incidaents: any } }
 const MyDiagram = () => {
     const [nodes,setNodes] = useState<NodeData<any>[]>([])
     const [edges,setEdges] = useState<EdgeData[]>([])
+    const [widthCanvas,useWidthCanvas] = useState<number>(document.documentElement.clientWidth)
+    const [heightCanvas,useHeightCanvas] = useState<number>(document.documentElement.clientHeight-64)
 
-    
+    // useEffect(() => {
+    //     console.log(document.documentElement.clientWidth)
+    // },[document.documentElement])
+    window.onresize = function(event) {
+        console.log(document.documentElement.clientWidth, document.documentElement.clientHeight-64)
+        useWidthCanvas(document.documentElement.clientWidth)
+        useHeightCanvas(document.documentElement.clientHeight-64)
+    };
 
     useEffect(() => {
         // console.log('--------------------')
@@ -57,16 +66,14 @@ const MyDiagram = () => {
                 }
             }
         })
-
-        // console.log(nodes,edges)
         setNodes(nodes)
         setEdges(edges)
 
     }, [])
     
     return (
-        <div style={{ top: 0, bottom: 0, left: 0, right: 0 }}>
-    <Canvas
+        <div id={'MyDiagram'}>
+    <Canvas 
         nodes={nodes}
         edges={edges}
         edge={(edge: EdgeProps) => {
@@ -78,17 +85,22 @@ const MyDiagram = () => {
             style={{ stroke: typeEdge == "during" ? 'green' : typeEdge == 'end'? 'red' : 'blue'}}
             />
             )}}
-        // width={window.innerWidth}
-        width={document.documentElement.clientWidth}
-        height={document.documentElement.clientHeight}
-        // height={800}
+        // width={300}
+        // width={widthCanvas}
+        // width={document.documentElement.clientWidth - 20}
+        // height={document.documentElement.clientHeight}
+        height={heightCanvas}
         // readonly
         disabled
         zoom={0.5}
+        // minZoom={0.5}
+        // maxZoom={10}
+        
         // fit
         // direction='RIGHT'
-        // maxWidth={800}
-        // maxHeight={800}
+        // maxWidth={widthCanvas}
+        // maxHeight={heightCanvas * 0.99}
+        onCanvasClick={() => {}}
     />
     </div>
 )}
