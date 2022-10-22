@@ -1,3 +1,13 @@
+:root {
+	--spaceVertical: 50px;
+    --spaceHorizontal: 30px
+	/* --text: #333;
+	--regular-text: 16px;
+	--lineheight: 1.65;
+	--userfont: roboto-st, sans-serif;
+	--systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif; */
+}
+
 body {
     background-color: black;
 }
@@ -48,4 +58,27 @@ body {
     /* text-indent: 1cm; */
     word-spacing: .7cm;
     /* letter-spacing: 1cm; */
+}
+
+.api-style {
+    /* display: flex; */
+    /* align-items: center; */
+    height: calc(100vh - 64px - var(--spaceVertical) - 10px );
+    margin: var(--spaceHorizontal) var(--spaceVertical);
+    /* text-align: center; */
+    Max-width: calc(99vw);
+    /* position: relative;     */
+}
+
+.api-style h1 {
+    font-weight: 650;
+    font-size: 43px;
+    /* word-spacing: .7cm; */
+    text-align: center;
+    letter-spacing: 5px;
+    /* text-decoration: underline rgb(105, 105, 105) solid ; */
+
+    border-bottom: 3px solid #ffffff;
+    padding-bottom: calc( var(--spaceVertical) - 10px);
+    margin-bottom: calc( var(--spaceVertical) );
 }

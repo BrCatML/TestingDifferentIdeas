@@ -11,6 +11,7 @@ import Root from "./routes/root"
 
 import Graph from "./routes/pages/graph"
 import Redux from './routes/pages/redux'
+import Api from './routes/pages/api'
 import Main from './routes/pages/index'
 //@ts-ignore
 import redux_logo from './static/redux_logo_48.png'
@@ -21,6 +22,11 @@ export const MenuList = [
     path: "graph",
     element: <Graph />,
   },
+  {
+    name: 'Api',
+    path: "api",
+    element: <Api />,
+  }, 
   {
     name: 'Redux',
     path: "redux",

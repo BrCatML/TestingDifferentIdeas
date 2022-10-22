@@ -6,3 +6,7 @@ export default () => {
     <MyDiagram />
   );
 }
+
+/*
+* основная разработка ведется в '../../projects/graphReaflow'
+*/
