@@ -1,25 +1,24 @@
+import React from "react";
+import Card from 'antd/es/card'
+import SyncOutlined from "@ant-design/icons/SyncOutlined"
+
 interface Props {
     activity: string;
     type?: string;
     busy?: boolean;
     onClickNext: () => void;
-  }
+}
   
-  export const Activity = (props: Props) => {
-    return (
-      <div className="Component">
-        <button className="btn" onClick={props.onClickNext} disabled={props.busy}>
-          {props.busy ? "Loading..." : "Next random activity"}
-        </button>
-        {props.type ? (
-          <div>
-            <p className="Component_title">{props.type.toUpperCase()}</p>
-            <p className="Component_text">{props.activity}</p>
-          </div>
-        ) : (
-          <p className="Component_text">Нажми на кнопку, получишь результат.</p>
-        )}
-      </div>
-    );
-  };
+export const Activity = (props: Props) => {
+
+return (
+    <Card 
+      title={props.type? props.type : 'Activity'} 
+      bordered={false}
+      actions={[<SyncOutlined disabled={props.busy} onClick={props.onClickNext} />]}
+    >
+      { props.busy ? <div style={{textAlign: "center", color: 'grey'}}>Loading...</div> : props.activity}
+    </Card>
+  )
+};
   

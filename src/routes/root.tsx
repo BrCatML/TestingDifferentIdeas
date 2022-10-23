@@ -3,7 +3,7 @@
 Новые страницы добавляй в "../router",а не здесь.
 */
 
-import { Outlet,NavLink, Link, useLocation } from "react-router-dom"
+import { Outlet, Link, useLocation } from "react-router-dom"
 import { MenuList } from "../router"
 import Layout from "antd/es/layout"
 import Menu from 'antd/es/menu'
@@ -18,13 +18,12 @@ export default function Root() {
   const location = useLocation()
 
   useEffect(() => {
-    const itemss: MenuProps['items'] = MenuList.map((value,index) => ({
-        label: <NavLink to={value.path}>{value.name}</NavLink>,
+    const items: MenuProps['items'] = MenuList.map((value,index) => ({
+        label: <Link to={value.path}><div style={{minWidth:'70px', textAlign: 'center'}}>{value.name}</div></Link>,
         key: value.path,
-        icon: value.icon,
       })
       )
-    setMenuItems(itemss)
+    setMenuItems(items)
   },[])
 
   useEffect(() => {

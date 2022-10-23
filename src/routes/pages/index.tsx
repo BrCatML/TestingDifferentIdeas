@@ -1,7 +1,6 @@
 import React from "react";
 //@ts-ignore
 import Logo from '../../static/logo_100.png'
-// import Logo from "../static/logo_100.png"
 
 export default () => {
 
@@ -12,7 +11,6 @@ export default () => {
             <h1>B K T R</h1>
         </div>
         </div>
-
     )
 }
 

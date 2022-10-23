@@ -13,13 +13,11 @@ import Graph from "./routes/pages/graph"
 import Redux from './routes/pages/redux'
 import Api from './routes/pages/api'
 import Main from './routes/pages/index'
-//@ts-ignore
-import redux_logo from './static/redux_logo_48.png'
 
 export const MenuList = [
   {
-    name: '🕸 Reaflow',
-    path: "graph",
+    name: 'Reaflow',
+    path: 'graph',
     element: <Graph />,
   },
   {
@@ -31,7 +29,6 @@ export const MenuList = [
     name: 'Redux',
     path: "redux",
     element: <Redux />,
-    icon: <img src={redux_logo} height={15} />,
   },  
 ]
 

@@ -2,16 +2,21 @@ interface Props {
     fact: string;
     busy?: boolean;
     onClickNext: () => void;
-  }
+}
+
+import Card from 'antd/es/card'
+import React from 'react';
+import SyncOutlined from "@ant-design/icons/SyncOutlined"
   
-  export const CatFact = (props: Props) => {
-    return (
-      <div className="Component">
-        <button className="btn" disabled={props.busy} onClick={props.onClickNext}>
-          {props.busy ? "Loading..." : "Next random fact"}
-        </button>
-        <p className="Component_text">{props.fact}</p>
-      </div>
-    );
-  };
+export const CatFact = (props: Props) => {
+  return (
+    <Card 
+      title="Cat Fact" 
+      bordered={false}
+      actions={[<SyncOutlined disabled={props.busy} onClick={props.onClickNext} />]}
+    >
+      { props.busy ? <div style={{textAlign: "center", color: 'grey'}}>Loading...</div> :  props.fact}
+    </Card>
+  )
+};
   

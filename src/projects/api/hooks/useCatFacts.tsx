@@ -5,15 +5,6 @@ export const useCatFacts = () => {
   const [fact, setFact] = useState("");
   const [busy, setBusy] = useState(false);
   const [recent, setRecent] = useState<string[]>([]);
-
-  useEffect(() => {
-    setBusy(true);
-    getRandomFact().then((response) => {
-      setFact(response.fact);
-      setBusy(false);
-    });
-  }, []);
-
   const handleNext = useCallback(() => {
     setBusy(true);
     getRandomFact().then((response) => {
@@ -22,6 +13,14 @@ export const useCatFacts = () => {
       setBusy(false);
     });
   }, [fact]);
+
+  useEffect(() => {
+    setBusy(true);
+    getRandomFact().then((response) => {
+      setFact(response.fact);
+      setBusy(false);
+    });
+  }, []);
 
   return {
     fact,
