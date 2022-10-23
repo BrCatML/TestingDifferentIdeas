@@ -7,7 +7,7 @@ import { useLocalStorage } from "./hooks/useLocalStorage";
 
 import { Activity } from "./components/Activity";
 import { useActivity } from "./hooks/useActivity";
-import Divider from "antd/es/divider";
+import Divider from "antd/es/divider"
 
 
 export default function App() {
