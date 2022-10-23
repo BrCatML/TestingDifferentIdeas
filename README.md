@@ -14,11 +14,11 @@
 
 ## Проекты
 ### Графический редактор схем [reaflow](https://github.com/reaviz/reaflow)
-1. `npm install reaflow --save` - установка
-2. [Reaflow](https://github.com/reaviz/reaflow) - документация с примерами
+ - `npm install reaflow --save` - установка
+ - [Reaflow](https://github.com/reaviz/reaflow) - документация с примерами
 
 ### Хуки + использование API
-Неплохое описание хуков реакта с примерами [здесь](https://github.com/harryheman/React-Total/blob/main/md/hooks.md)
+ - Неплохое описание хуков реакта с примерами [здесь](https://github.com/harryheman/React-Total/blob/main/md/hooks.md)
 
 ### Redux
  - manual RU 1: [Введение в Redux & React-redux](https://habr.com/ru/post/498860/?ysclid=l63kvb34ii459220139)
