@@ -29,5 +29,5 @@
 
 ## Планы
  - Научиться работать с темами оформения.
- - Изучение верстки. Реализация идей отсюда: [webDesign](https://ru.pinterest.com/bktrml/webdesign/).
+ - Изучение верстки. Реализация идей отсюда: [webDesign](https://ru.pinterest.com/bktrml/webdesign/). Можно подергать картинки из FarCry6.
  - Создание компонентов.

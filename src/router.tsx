@@ -11,6 +11,7 @@ import Root from "./routes/root"
 
 import Graph from "./routes/pages/graph"
 import Redux from './routes/pages/redux'
+import Effector from './routes/pages/effector'
 import Api from './routes/pages/api'
 import Main from './routes/pages/index'
 
@@ -30,6 +31,11 @@ export const MenuList = [
     path: "redux",
     element: <Redux />,
   },  
+  {
+    name: 'Effector',
+    path: "effector",
+    element: <Effector />,
+  }, 
 ]
 
 export const router = createBrowserRouter([
