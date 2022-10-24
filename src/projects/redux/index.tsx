@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 // //@ts-ignore
 // import Logo from '../../static/logo_100.png'
 
@@ -22,20 +22,20 @@ const urlFact = "https://catfact.ninja/fact"
 
 export default function App() {
 
-    window.onload = () => {
-        fetchEvent(url)
-        fetchFactEvent(urlFact)
-    };
-
     const styleBlock: React.CSSProperties = {borderStyle: "solid", borderColor: 'gray' , margin: '10px', padding: '15px', color: 'black', width: '600px'}
 
     const textActStore = useStore(actStore)
     const pending = useStore(fetchApiFx.pending)
     const fetchEvent = useEvent(fetchApiFx)
 
-    const fetchFactEvent = useEvent(fetchApiFxCat)
     const textFactStore = useStore(factStore)
     const pendingFact = useStore(fetchApiFxCat.pending)
+    const fetchFactEvent = useEvent(fetchApiFxCat)
+
+    useEffect(window.onload = () => {
+        if (textActStore.current == null) fetchEvent(url)
+        if (textFactStore.current == null) fetchFactEvent(urlFact)
+    },[])
 
     return (
         <div className="index-style ">
