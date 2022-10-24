@@ -27,7 +27,7 @@ export const MenuList = [
     element: <Api />,
   }, 
   {
-    name: 'Redux',
+    name: 'ne Redux',
     path: "redux",
     element: <Redux />,
   },  

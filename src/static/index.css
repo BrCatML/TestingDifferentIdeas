@@ -36,20 +36,30 @@ body {
     height: calc(100vh - 64px);
     color: white;
     text-align: center;
-    Max-width: calc(99vw);
+    max-width: calc(99vw);
     position: relative;    
 }
 .index-style h1 {
     color: white;
-    
     font-weight: 650;
     font-size: 43px;
     word-spacing: .7cm;
 }
 
+.index-style h2 {    
+    font-weight: 650;
+    font-size: 30px;
+    word-spacing: .7cm;
+}
+
+.index-style button {
+    margin: 10px 0px;
+    width: 100%;
+}
+
 .api-style {
     height: calc(100vh - 64px - var(--spaceVertical) - 10px );
-    margin: var(--spaceHorizontal) var(--spaceVertical);
+    margin: var(--spaceVertical) var(--spaceHorizontal);
     Max-width: calc(99vw);
     position: relative;    
 }
