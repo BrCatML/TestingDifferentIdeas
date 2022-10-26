@@ -1,3 +1,5 @@
+import React from "react";
+
 interface Props {
     activity: string;
     type?: string;

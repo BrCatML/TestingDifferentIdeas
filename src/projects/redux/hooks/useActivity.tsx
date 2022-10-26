@@ -9,8 +9,9 @@ export const useActivity = () => {
   useEffect(() => {
     setBusy(true);
     getRandomActivity().then((response) => {
-      setActivity(response.activity);
-      setBusy(false);
+        setActivity(`${response.type.toUpperCase()}: ${response.activity}.`);
+        setType(response.type);
+        setBusy(false);
     });
   }, []);
 
